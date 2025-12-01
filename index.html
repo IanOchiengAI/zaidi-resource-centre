@@ -3,74 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zaidi ya Misuli Resource Centre</title>
-    
+    <title>Home | Zaidi ya Misuli</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inter:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-    
     <script src="https://unpkg.com/lucide@latest"></script>
-
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        'brand-green': '#32CD32',
-                        'brand-black': '#111111',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Syne', 'sans-serif'],
-                        brand: ['Cinzel Decorative', 'cursive'], /* The New Font */
-                    }
+                    colors: { 'brand-green': '#32CD32', 'brand-black': '#111111' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Syne', 'sans-serif'], brand: ['Cinzel Decorative', 'cursive'] }
                 }
             }
         }
     </script>
-    <style>
-        body { -webkit-font-smoothing: antialiased; }
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: #32CD32;
-            ring: 2px;
-        }
-        html { scroll-behavior: smooth; }
-    </style>
 </head>
-<body class="bg-white text-brand-black">
+<body class="bg-white text-brand-black flex flex-col min-h-screen">
 
     <nav class="fixed top-0 w-full bg-white/95 backdrop-blur z-50 py-4 md:py-6 border-b border-gray-100">
         <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
-            
-            <h1 class="font-brand font-bold text-xl md:text-2xl tracking-tight leading-tight max-w-[75%] md:max-w-none text-brand-black">
+            <a href="index.html" class="font-brand font-bold text-xl md:text-2xl tracking-tight leading-tight max-w-[75%] md:max-w-none text-brand-black">
                 Zaidi ya Misuli <br class="md:hidden"> Resource Centre
-            </h1>
-            
+            </a>
             <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide font-sans">
-                <a href="#home" class="hover:text-brand-green transition">HOME</a>
-                <a href="#about" class="hover:text-brand-green transition">ABOUT US</a>
-                <a href="#pillars" class="hover:text-brand-green transition">OUR PILLARS</a>
-                <a href="#resources" class="hover:text-brand-green transition">RESOURCES</a>
-                <a href="#contact" class="hover:text-brand-green transition">CONTACT</a>
+                <a href="index.html" class="text-brand-green transition">HOME</a>
+                <a href="about.html" class="hover:text-brand-green transition">ABOUT US</a>
+                <a href="pillars.html" class="hover:text-brand-green transition">OUR PILLARS</a>
+                <a href="resources.html" class="hover:text-brand-green transition">RESOURCES</a>
+                <a href="contact.html" class="hover:text-brand-green transition">CONTACT</a>
             </div>
-
             <button onclick="toggleMobileMenu()" class="md:hidden w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-brand-green hover:text-white transition bg-white z-50">
                 <i data-lucide="menu" class="w-5 h-5"></i>
             </button>
         </div>
-
         <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl py-6 px-6 flex flex-col space-y-4 md:hidden">
-            <a href="#home" onclick="toggleMobileMenu()" class="text-lg font-bold border-b border-gray-100 pb-2">HOME</a>
-            <a href="#about" onclick="toggleMobileMenu()" class="text-lg font-bold border-b border-gray-100 pb-2">ABOUT US</a>
-            <a href="#pillars" onclick="toggleMobileMenu()" class="text-lg font-bold border-b border-gray-100 pb-2">OUR PILLARS</a>
-            <a href="#resources" onclick="toggleMobileMenu()" class="text-lg font-bold border-b border-gray-100 pb-2">RESOURCES</a>
-            <a href="#contact" onclick="toggleMobileMenu()" class="text-lg font-bold text-brand-green">CONTACT US</a>
+            <a href="index.html" class="text-lg font-bold border-b border-gray-100 pb-2 text-brand-green">HOME</a>
+            <a href="about.html" class="text-lg font-bold border-b border-gray-100 pb-2">ABOUT US</a>
+            <a href="pillars.html" class="text-lg font-bold border-b border-gray-100 pb-2">OUR PILLARS</a>
+            <a href="resources.html" class="text-lg font-bold border-b border-gray-100 pb-2">RESOURCES</a>
+            <a href="contact.html" class="text-lg font-bold">CONTACT US</a>
         </div>
     </nav>
 
-    <section id="home" class="pt-32 md:pt-40 pb-20 px-6 max-w-6xl mx-auto">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+    <section class="flex-grow pt-32 md:pt-40 pb-20 px-6 max-w-6xl mx-auto flex items-center">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-12 w-full">
             <div class="md:w-1/2 space-y-6">
                 <h1 class="font-display font-bold text-6xl md:text-8xl leading-[0.9]">
                     Beyond <br>Muscles.
@@ -79,7 +55,7 @@
                     Demystifying, researching, and supporting those with muscular dystrophy in Kenya.
                 </p>
                 <div class="pt-4">
-                    <a href="#pillars" class="inline-block bg-brand-green text-white font-bold px-8 py-4 text-sm tracking-wider hover:opacity-90 transition font-sans">
+                    <a href="pillars.html" class="inline-block bg-brand-green text-white font-bold px-8 py-4 text-sm tracking-wider hover:opacity-90 transition font-sans">
                         SEE OUR WORK
                     </a>
                 </div>
@@ -90,247 +66,17 @@
         </div>
     </section>
 
-    <section id="about" class="py-20 px-6 max-w-6xl mx-auto">
-        <h2 class="font-display font-bold text-4xl md:text-5xl mb-16">ABOUT US</h2>
-
-        <div class="mb-20">
-            <div class="border-l-4 border-brand-green pl-6 space-y-4">
-                <h3 class="font-display font-bold text-3xl mb-4">Our History</h3>
-                <p class="text-lg">Founded in 2013 as Muscular Dystrophy Society Kenya. Formally registered in 2025.</p>
-                <p class="text-lg">Grounded in <span class="font-bold">Disability Justice Principles</span>: Interdependence, Collective Liberation, and Wholeness.</p>
-                <p class="text-gray-600">Co-convener of Rare Disease Day celebrations in Kenya from 2014 to 2017 alongside Stepping Stones Kenya and Gertrude’s Children’s Hospital Foundation.</p>
-            </div>
-        </div>
-
-        <div>
-            <h3 class="font-display font-bold text-4xl mb-12">The Team</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                
-                <div class="space-y-4">
-                    <a href="https://www.linkedin.com/in/faithnjahirawangari/" target="_blank" class="block group overflow-hidden">
-                        <div class="aspect-square bg-gray-100 relative">
-                            <img src="faith.jpg" alt="Faith Njahira" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center"></div>
-                        </div>
-                    </a>
-                    <div>
-                        <div class="flex items-center gap-3 mb-1">
-                            <a href="https://www.linkedin.com/in/faithnjahirawangari/" target="_blank" class="hover:text-brand-green transition-colors">
-                                <h4 class="font-display font-bold text-2xl">Faith Njahĩra Wangarĩ</h4>
-                            </a>
-                            <a href="https://www.linkedin.com/in/faithnjahirawangari/" target="_blank" class="text-[#32CD32] hover:text-black transition-colors" aria-label="LinkedIn">
-                                <i data-lucide="linkedin" class="w-5 h-5"></i>
-                            </a>
-                        </div>
-                        <p class="text-brand-green font-bold text-xs tracking-widest uppercase mb-3">Co-Founder & Executive Director</p>
-                        <p class="text-sm leading-relaxed text-gray-700">Feminist scholar, author, researcher and disability inclusion expert with muscular dystrophy. Member of the Global Limb Girdle Muscular Dystrophy Community Advisory Board. Global consultant on disability, gender and organising. Masters in Disability Studies from Syracuse University-USA.</p>
-                    </div>
-                </div>
-
-                <div class="space-y-4">
-                    <a href="https://www.linkedin.com/in/margaret-gachigi/" target="_blank" class="block group overflow-hidden">
-                        <div class="aspect-square bg-gray-100 relative">
-                            <img src="margaret.jpg" alt="Margaret Wangari" class="w-full h-full object-cover grayscale transition-transform duration-500 group-hover:scale-105">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center"></div>
-                        </div>
-                    </a>
-                    <div>
-                        <div class="flex items-center gap-3 mb-1">
-                            <a href="https://www.linkedin.com/in/margaret-gachigi/" target="_blank" class="hover:text-brand-green transition-colors">
-                                <h4 class="font-display font-bold text-2xl">Margaret Wangarĩ Gachĩgĩ</h4>
-                            </a>
-                            <a href="https://www.linkedin.com/in/margaret-gachigi/" target="_blank" class="text-[#32CD32] hover:text-black transition-colors" aria-label="LinkedIn">
-                                <i data-lucide="linkedin" class="w-5 h-5"></i>
-                            </a>
-                        </div>
-                        <p class="text-brand-green font-bold text-xs tracking-widest uppercase mb-3">Co-Founder & Director of Education</p>
-                        <p class="text-sm leading-relaxed text-gray-700">Educator & Administrator. 36 years of public service, including 27 years as secondary school Principal. Court Accredited Mediator (2023) and certified by CREA Disability, Sexuality and Rights Online Institute-East Africa (2025). Bachelor’s degree in Education from Kenyatta University.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="pillars" class="py-20 px-6 max-w-6xl mx-auto border-t border-gray-200">
-        <h2 class="font-display font-bold text-4xl md:text-5xl mb-16">OUR PILLARS</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="border border-brand-black p-8 hover:shadow-lg transition-shadow">
-                <div class="bg-brand-green w-12 h-12 flex items-center justify-center text-white mb-6">
-                    <i data-lucide="book-open"></i>
-                </div>
-                <h3 class="font-display font-bold text-2xl mb-4">Education & Training</h3>
-                <p class="text-sm text-gray-800">Training teachers/educators, healthcare professionals of all cadres, religious/spiritual practitioners and other relevant stakeholders on muscular dystrophy and other disabilities.</p>
-            </div>
-
-            <div class="border border-brand-black p-8 hover:shadow-lg transition-shadow">
-                <div class="bg-brand-green w-12 h-12 flex items-center justify-center text-white mb-6">
-                    <i data-lucide="users"></i>
-                </div>
-                <h3 class="font-display font-bold text-2xl mb-4">Research</h3>
-                <p class="text-sm text-gray-800">Bridging knowledge gaps on muscular dystrophy and disability using feminist and decolonial approaches. Prioritising lived experiences and centering community voices.</p>
-            </div>
-
-            <div class="border border-brand-black p-8 hover:shadow-lg transition-shadow">
-                <div class="bg-brand-green w-12 h-12 flex items-center justify-center text-white mb-6">
-                    <i data-lucide="heart"></i>
-                </div>
-                <h3 class="font-display font-bold text-2xl mb-4">Wholeness</h3>
-                <p class="text-sm text-gray-800">Mind, body, and spirit wellness. Focus on play, grief and mourning, music, and dance. Creating spaces for joy, healing, and authentic expression.</p>
-            </div>
-        </div>
-
-        <div class="mt-16 border-t border-brand-black pt-8">
-            <h3 class="font-display font-bold text-2xl md:text-3xl leading-snug">
-                Together, these pillars create a foundation for lasting change—one that honors the full humanity of every person.
-            </h3>
-        </div>
-    </section>
-
-    <section id="resources" class="py-20 px-6 max-w-6xl mx-auto border-t border-gray-200">
-        <h2 class="font-display font-bold text-4xl md:text-5xl mb-16">RESOURCES</h2>
-
-        <div class="space-y-12">
-            <div>
-                <div class="flex items-center gap-3 mb-6 border-l-4 border-brand-green pl-4">
-                    <i data-lucide="video" class="text-brand-green"></i>
-                    <h3 class="font-display font-bold text-2xl">Video/Media</h3>
-                </div>
-                
-                <div class="space-y-4">
-                    <a href="https://brilliantconvo.wixsite.com/home" target="_blank" class="block border border-brand-black p-6 hover:bg-gray-50 transition flex justify-between items-center group">
-                        <span class="font-bold">Documentary: For All The Brilliant Conversations</span>
-                        <i data-lucide="external-link" class="text-gray-400 group-hover:text-brand-green"></i>
-                    </a>
-                    <a href="https://www.youtube.com/watch?v=jMXQEL1Mh50" target="_blank" class="block border border-brand-black p-6 hover:bg-gray-50 transition flex justify-between items-center group">
-                        <span class="font-bold">Family TV Health Show on Muscular Dystrophy</span>
-                        <i data-lucide="external-link" class="text-gray-400 group-hover:text-brand-green"></i>
-                    </a>
-                    <a href="https://youtu.be/OGpv67_Ik-0" target="_blank" class="block border border-brand-black p-6 hover:bg-gray-50 transition flex justify-between items-center group">
-                        <span class="font-bold">Rare Disease Day 2014</span>
-                        <i data-lucide="external-link" class="text-gray-400 group-hover:text-brand-green"></i>
-                    </a>
-                    <a href="https://youtu.be/3NdDkCNttCo" target="_blank" class="block border border-brand-black p-6 hover:bg-gray-50 transition flex justify-between items-center group">
-                        <span class="font-bold">Rare Disease Day 2016</span>
-                        <i data-lucide="external-link" class="text-gray-400 group-hover:text-brand-green"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div>
-                 <div class="flex items-center gap-3 mb-6 border-l-4 border-brand-green pl-4">
-                    <i data-lucide="book-open" class="text-brand-green"></i>
-                    <h3 class="font-display font-bold text-2xl">Reading/Publications</h3>
-                </div>
-
-                <div class="space-y-4">
-                    <a href="https://read.dukeupress.edu/books/book/3194/Crip-Genealogies" target="_blank" class="block border border-brand-black p-6 hover:bg-gray-50 transition flex justify-between items-center group">
-                        <span class="font-bold text-brand-green">Book Chapter: Crip Genealogies (Duke University Press) by Faith Njahĩra Wangarĩ</span>
-                        <i data-lucide="external-link" class="text-gray-400 group-hover:text-brand-green"></i>
-                    </a>
-                    <a href="https://www.adry.up.ac.za/book-review-2022" target="_blank" class="block border border-brand-black p-6 hover:bg-gray-50 transition flex justify-between items-center group">
-                        <span class="font-bold">Book Review: African Disability Rights Yearbook (2022) by FN Wangarĩ</span>
-                        <i data-lucide="external-link" class="text-gray-400 group-hover:text-brand-green"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-20 px-6 max-w-6xl mx-auto border-t border-gray-200">
-        <h2 class="font-display font-bold text-4xl md:text-5xl mb-16">CONTACT</h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div class="space-y-8">
-                <div class="bg-[#ebfbeb] border border-brand-green p-8">
-                    <p class="font-bold text-xl leading-relaxed">
-                        We would love to hear from you! If our vision aligns, we welcome gifts of service, partnership, donations and conversations.
-                    </p>
-                </div>
-                
-                <div class="border border-brand-black p-6">
-                    <div class="flex items-center gap-4">
-                        <i data-lucide="map-pin"></i>
-                        <div>
-                            <p class="font-bold text-sm uppercase">Location</p>
-                            <p>Kiambu County, Kenya</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="border border-brand-black p-6">
-                    <div class="flex items-center gap-4">
-                        <i data-lucide="mail"></i>
-                        <div>
-                            <p class="font-bold text-sm uppercase">Email</p>
-                            <p>info@zaidiyamisuli.org</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="border border-brand-black p-6">
-                    <div class="flex items-center gap-4">
-                        <i data-lucide="phone"></i>
-                        <div>
-                            <p class="font-bold text-sm uppercase">Phone</p>
-                            <p>+254 734 730 281</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <form action="https://formspree.io/f/mnnevqqp" method="POST" class="space-y-6">
-                    <div>
-                        <label class="block font-bold text-sm mb-2">Name</label>
-                        <input type="text" name="name" class="w-full border border-brand-black p-4 focus:ring-1 focus:ring-brand-green">
-                    </div>
-                    <div>
-                        <label class="block font-bold text-sm mb-2">Email</label>
-                        <input type="email" name="email" class="w-full border border-brand-black p-4 focus:ring-1 focus:ring-brand-green">
-                    </div>
-                    <div>
-                        <label class="block font-bold text-sm mb-2">Message</label>
-                        <textarea name="message" rows="6" class="w-full border border-brand-black p-4 focus:ring-1 focus:ring-brand-green"></textarea>
-                    </div>
-                    <button type="submit" class="bg-brand-green text-white font-bold px-8 py-4 w-full md:w-auto hover:opacity-90 transition">
-                        SEND MESSAGE
-                    </button>
-                </form>
-            </div>
-        </div>
-        
-        <div class="mt-20 text-center font-display font-bold text-xl">
-            Together, we build a more just and loving society.
-        </div>
-    </section>
-
-    <footer class="bg-brand-black text-white py-8 border-t border-gray-800">
+    <footer class="bg-brand-black text-white py-8 border-t border-gray-800 mt-auto">
         <div class="container mx-auto px-6 flex flex-col items-center gap-4">
-            
             <a href="https://www.facebook.com/dystrophykenya" target="_blank" class="text-white hover:text-[#32CD32] transition-colors p-2 bg-gray-900 rounded-full">
                 <i data-lucide="facebook" class="w-6 h-6"></i>
             </a>
-    
             <div class="text-center text-sm text-gray-400">
                 &copy; 2025 <span class="font-brand font-bold text-gray-200">Zaidi ya Misuli Resource Centre</span>. <br>
                 <span class="text-xs opacity-50 font-sans">Grounded in Disability Justice.</span>
             </div>
         </div>
     </footer>
-
-    <script>
-        lucide.createIcons();
-
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            if (menu.classList.contains('hidden')) {
-                menu.classList.remove('hidden');
-            } else {
-                menu.classList.add('hidden');
-            }
-        }
-    </script>
+    <script>lucide.createIcons(); function toggleMobileMenu() { document.getElementById('mobile-menu').classList.toggle('hidden'); }</script>
 </body>
 </html>
