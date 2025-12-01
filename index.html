@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Zaidi ya Misuli</title>
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="rose-logo.png">
+
+    <!-- SEO & SOCIAL -->
+    <meta property="og:title" content="Zaidi ya Misuli Resource Centre">
+    <meta property="og:description" content="Beyond Muscles. Demystifying, researching, and supporting those with muscular dystrophy in Kenya.">
+    <meta property="og:image" content="https://zaidiyamisuli.org/rose-logo.png">
+    <meta property="og:url" content="https://zaidiyamisuli.org">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- CSS & FONTS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inter:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -17,27 +29,38 @@
             }
         }
     </script>
+    <style>
+        body { animation: fadeIn 0.8s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
 </head>
 <body class="bg-white text-brand-black flex flex-col min-h-screen">
 
+    <!-- NAVIGATION -->
     <nav class="fixed top-0 w-full bg-white/95 backdrop-blur z-50 py-4 md:py-6 border-b border-gray-100">
         <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
-            <a href="index.html" class="font-brand font-bold text-xl md:text-2xl tracking-tight leading-tight max-w-[75%] md:max-w-none text-brand-black">
-                Zaidi ya Misuli <br class="md:hidden"> Resource Centre
+            
+            <!-- Mobile: Menu Left -->
+            <button onclick="toggleMobileMenu()" class="md:hidden w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-brand-green hover:text-white transition bg-white z-50 order-1 md:order-none shrink-0">
+                <i data-lucide="menu" class="w-5 h-5"></i>
+            </button>
+
+            <!-- Logo Text -->
+            <a href="index.html" class="order-2 md:order-none font-brand font-bold text-lg md:text-2xl tracking-tight leading-tight text-brand-black text-right md:text-left flex-grow md:flex-grow-0 ml-4 md:ml-0">
+                Zaidi ya Misuli Resource Centre
             </a>
-            <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide font-sans">
-                <a href="index.html" class="text-brand-green transition">HOME</a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide font-sans md:ml-auto">
                 <a href="about.html" class="hover:text-brand-green transition">ABOUT US</a>
                 <a href="pillars.html" class="hover:text-brand-green transition">OUR PILLARS</a>
                 <a href="resources.html" class="hover:text-brand-green transition">RESOURCES</a>
                 <a href="contact.html" class="hover:text-brand-green transition">CONTACT</a>
             </div>
-            <button onclick="toggleMobileMenu()" class="md:hidden w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-brand-green hover:text-white transition bg-white z-50">
-                <i data-lucide="menu" class="w-5 h-5"></i>
-            </button>
         </div>
+
+        <!-- Mobile Dropdown -->
         <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl py-6 px-6 flex flex-col space-y-4 md:hidden">
-            <a href="index.html" class="text-lg font-bold border-b border-gray-100 pb-2 text-brand-green">HOME</a>
             <a href="about.html" class="text-lg font-bold border-b border-gray-100 pb-2">ABOUT US</a>
             <a href="pillars.html" class="text-lg font-bold border-b border-gray-100 pb-2">OUR PILLARS</a>
             <a href="resources.html" class="text-lg font-bold border-b border-gray-100 pb-2">RESOURCES</a>
@@ -45,27 +68,34 @@
         </div>
     </nav>
 
+    <!-- HERO SECTION -->
     <section class="flex-grow pt-32 md:pt-40 pb-20 px-6 max-w-6xl mx-auto flex items-center">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-12 w-full">
-            <div class="md:w-1/2 space-y-6">
+        <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-12 w-full">
+            
+            <!-- Left: BIG LOGO -->
+            <div class="md:w-1/2 flex justify-center md:justify-start">
+                <img src="rose-logo.png" alt="Rose Logo" class="w-[300px] md:w-[500px] h-auto max-w-full">
+            </div>
+
+            <!-- Right: TEXT -->
+            <div class="md:w-1/2 space-y-6 text-center md:text-left">
                 <h1 class="font-display font-bold text-6xl md:text-8xl leading-[0.9]">
                     Beyond <br>Muscles.
                 </h1>
-                <p class="text-lg md:text-2xl font-light text-gray-800 max-w-lg font-sans">
+                <p class="text-lg md:text-2xl font-light text-gray-800 max-w-lg font-sans mx-auto md:mx-0">
                     Demystifying, researching, and supporting those with muscular dystrophy in Kenya.
                 </p>
                 <div class="pt-4">
-                    <a href="pillars.html" class="inline-block bg-brand-green text-white font-bold px-8 py-4 text-sm tracking-wider hover:opacity-90 transition font-sans">
+                    <a href="pillars.html" class="inline-block bg-brand-green text-white font-bold px-8 py-4 text-sm tracking-wider hover:opacity-90 transition font-sans shadow-lg shadow-green-100">
                         SEE OUR WORK
                     </a>
                 </div>
             </div>
-            <div class="md:w-1/2 flex justify-center md:justify-end">
-                <img src="rose-logo.png" alt="Rose Logo" class="w-[250px] md:w-[400px] h-auto">
-            </div>
+
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="bg-brand-black text-white py-8 border-t border-gray-800 mt-auto">
         <div class="container mx-auto px-6 flex flex-col items-center gap-4">
             <a href="https://www.facebook.com/dystrophykenya" target="_blank" class="text-white hover:text-[#32CD32] transition-colors p-2 bg-gray-900 rounded-full">
