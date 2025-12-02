@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You | Zaidi ya Misuli</title>
+    
     <link rel="icon" type="image/png" href="rose-logo.png">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Syne:wght@700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -13,7 +15,11 @@
             theme: {
                 extend: {
                     colors: { 'brand-green': '#32CD32', 'brand-black': '#111111' },
-                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Syne', 'sans-serif'], brand: ['Inter', 'sans-serif'] }
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'], 
+                        display: ['Syne', 'sans-serif'],
+                        helvetica: ['"Helvetica Hebrew"', 'Helvetica', 'Arial', 'sans-serif'] 
+                    }
                 }
             }
         }
@@ -21,21 +27,40 @@
     <style>body { animation: fadeIn 0.8s ease-in-out; }</style>
 </head>
 <body class="bg-white text-brand-black flex flex-col min-h-screen">
+
+    <!-- Simple Nav -->
     <nav class="fixed top-0 w-full bg-white/95 backdrop-blur z-50 py-4 md:py-6 border-b border-gray-100">
         <div class="max-w-6xl mx-auto px-6 flex justify-center md:justify-start items-center">
-            <a href="index.html" class="font-brand font-black text-xl md:text-2xl tracking-tighter leading-tight text-brand-black text-center md:text-left uppercase">Zaidi ya Misuli <span class="inline-block md:inline">Resource Centre</span></a>
+            <a href="index.html" class="font-helvetica font-bold text-xl md:text-2xl tracking-tight leading-tight text-brand-black text-center md:text-left uppercase">
+                Zaidi ya Misuli <span class="inline-block md:inline">Resource Centre</span>
+            </a>
         </div>
     </nav>
+
+    <!-- Success Message -->
     <section class="flex-grow flex flex-col items-center justify-center text-center px-6 pt-32 pb-20">
-        <div class="w-24 h-24 bg-[#ebfbeb] rounded-full flex items-center justify-center text-brand-green mb-8"><i data-lucide="check" class="w-12 h-12"></i></div>
+        <div class="w-24 h-24 bg-[#ebfbeb] rounded-full flex items-center justify-center text-brand-green mb-8">
+            <i data-lucide="check" class="w-12 h-12"></i>
+        </div>
         <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">Thank You!</h1>
-        <p class="text-lg md:text-xl text-gray-600 max-w-lg mb-10 font-sans">Your message has been received. We appreciate you reaching out to Zaidi ya Misuli Resource Centre and will get back to you shortly.</p>
-        <a href="index.html" class="bg-brand-green text-white font-bold px-8 py-4 tracking-wider hover:opacity-90 transition shadow-lg shadow-green-100 font-sans">BACK TO HOME</a>
+        <p class="text-lg md:text-xl text-gray-600 max-w-lg mb-10 font-sans">
+            Your message has been received. We appreciate you reaching out to Zaidi ya Misuli Resource Centre and will get back to you shortly.
+        </p>
+        <a href="index.html" class="bg-brand-green text-white font-bold px-8 py-4 tracking-wider hover:opacity-90 transition shadow-lg shadow-green-100 font-sans">
+            BACK TO HOME
+        </a>
     </section>
+
+    <!-- Footer -->
     <footer class="bg-brand-black text-white py-8 border-t border-gray-800 mt-auto">
         <div class="container mx-auto px-6 flex flex-col items-center gap-4">
-            <a href="https://www.facebook.com/dystrophykenya" target="_blank" class="text-white hover:text-[#32CD32] transition-colors p-2 bg-gray-900 rounded-full"><i data-lucide="facebook" class="w-6 h-6"></i></a>
-            <div class="text-center text-sm text-gray-400">&copy; 2025 <span class="font-brand font-bold text-gray-200">Zaidi ya Misuli Resource Centre</span>. <br><span class="text-xs opacity-50 font-sans">Grounded in Disability Justice.</span></div>
+            <a href="https://www.facebook.com/dystrophykenya" target="_blank" class="text-white hover:text-[#32CD32] transition-colors p-2 bg-gray-900 rounded-full">
+                <i data-lucide="facebook" class="w-6 h-6"></i>
+            </a>
+            <div class="text-center text-sm text-gray-400">
+                &copy; 2025 <span class="font-helvetica font-bold text-gray-200">Zaidi ya Misuli Resource Centre</span>. <br>
+                <span class="text-xs opacity-50 font-sans">Grounded in Disability Justice.</span>
+            </div>
         </div>
     </footer>
     <script>lucide.createIcons();</script>
