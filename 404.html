@@ -6,9 +6,18 @@
     <title>Page Not Found | Zaidi ya Misuli</title>
     <link rel="icon" type="image/png" href="rose-logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Syne:wght@700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script>tailwind.config = { theme: { extend: { colors: { 'brand-green': '#32CD32', 'brand-black': '#111111' }, fontFamily: { sans: ['Inter', 'sans-serif'], brand: ['Cinzel Decorative', 'cursive'] } } } }</script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'brand-green': '#32CD32', 'brand-black': '#111111' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], brand: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
 </head>
 <body class="bg-white text-brand-black flex flex-col min-h-screen items-center justify-center text-center p-6">
     <div class="mb-8"><img src="rose-logo.png" alt="Zaidi ya Misuli Logo" class="w-32 h-auto mx-auto opacity-50 grayscale"></div>
