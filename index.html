@@ -17,14 +17,19 @@
 
     <!-- CSS & FONTS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inter:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Removed Cinzel, keeping Syne and Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: { 'brand-green': '#32CD32', 'brand-black': '#111111' },
-                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Syne', 'sans-serif'], brand: ['Cinzel Decorative', 'cursive'] }
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'], 
+                        display: ['Syne', 'sans-serif'], 
+                        brand: ['Syne', 'sans-serif'] /* UPDATED TO SYNE */
+                    }
                 }
             }
         }
@@ -40,13 +45,13 @@
     <nav class="fixed top-0 w-full bg-white/95 backdrop-blur z-50 py-4 md:py-6 border-b border-gray-100">
         <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
             
-            <!-- Mobile: Menu Left -->
+            <!-- Mobile: Menu Button (Left) -->
             <button onclick="toggleMobileMenu()" class="md:hidden w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-brand-green hover:text-white transition bg-white z-50 order-1 md:order-none shrink-0">
                 <i data-lucide="menu" class="w-5 h-5"></i>
             </button>
 
-            <!-- Logo Text (Full Name, Bold) -->
-            <a href="index.html" class="order-2 md:order-none font-brand font-black text-xl md:text-3xl tracking-wide leading-tight text-brand-black text-right md:text-left flex-grow md:flex-grow-0 ml-4 md:ml-0">
+            <!-- LOGO TEXT (Updated Font, Full Name, Bold) -->
+            <a href="index.html" class="order-2 md:order-none font-brand font-extrabold text-xl md:text-2xl tracking-tight leading-tight text-brand-black text-right md:text-left flex-grow md:flex-grow-0 ml-4 md:ml-0 uppercase">
                 Zaidi ya Misuli <span class="inline-block md:inline">Resource Centre</span>
             </a>
             
