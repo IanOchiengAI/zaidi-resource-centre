@@ -4,45 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources | Zaidi ya Misuli</title>
-    
     <link rel="icon" type="image/png" href="rose-logo.png">
-
     <meta property="og:title" content="Resources - Zaidi ya Misuli Resource Centre">
-    <meta property="og:description" content="Watch our documentaries, health shows, and read our publications.">
-    <meta property="og:image" content="https://zaidiyamisuli.org/rose-logo.png">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inter:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: { 'brand-green': '#32CD32', 'brand-black': '#111111' },
-                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Syne', 'sans-serif'], brand: ['Cinzel Decorative', 'cursive'] }
-                }
-            }
-        }
-    </script>
-    <style>
-        body { animation: fadeIn 0.8s ease-in-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-    </style>
+    <script>tailwind.config = { theme: { extend: { colors: { 'brand-green': '#32CD32', 'brand-black': '#111111' }, fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Syne', 'sans-serif'], brand: ['Cinzel Decorative', 'cursive'] } } } }</script>
+    <style>body { animation: fadeIn 0.8s ease-in-out; }</style>
 </head>
 <body class="bg-white text-brand-black flex flex-col min-h-screen">
-
-    <!-- NAVIGATION -->
     <nav class="fixed top-0 w-full bg-white/95 backdrop-blur z-50 py-4 md:py-6 border-b border-gray-100">
         <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
-            
-            <button onclick="toggleMobileMenu()" class="md:hidden w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-brand-green hover:text-white transition bg-white z-50 order-1 md:order-none shrink-0">
-                <i data-lucide="menu" class="w-5 h-5"></i>
-            </button>
-
-            <a href="index.html" class="order-2 md:order-none font-brand font-bold text-lg md:text-2xl tracking-tight leading-tight text-brand-black text-right md:text-left flex-grow md:flex-grow-0 ml-4 md:ml-0">
-                Zaidi ya Misuli Resource Centre
-            </a>
-
+            <button onclick="toggleMobileMenu()" class="md:hidden w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-brand-green hover:text-white transition bg-white z-50 order-1 md:order-none shrink-0"><i data-lucide="menu" class="w-5 h-5"></i></button>
+            <a href="index.html" class="order-2 md:order-none font-brand font-black text-xl md:text-3xl tracking-wide leading-tight text-brand-black text-right md:text-left flex-grow md:flex-grow-0 ml-4 md:ml-0">Zaidi ya Misuli <span class="inline-block md:inline">Resource Centre</span></a>
             <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide font-sans md:ml-auto">
                 <a href="about.html" class="hover:text-brand-green transition">ABOUT US</a>
                 <a href="pillars.html" class="hover:text-brand-green transition">OUR PILLARS</a>
@@ -50,7 +24,6 @@
                 <a href="contact.html" class="hover:text-brand-green transition">CONTACT</a>
             </div>
         </div>
-
         <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl py-6 px-6 flex flex-col space-y-4 md:hidden">
             <a href="about.html" class="text-lg font-bold border-b border-gray-100 pb-2">ABOUT US</a>
             <a href="pillars.html" class="text-lg font-bold border-b border-gray-100 pb-2">OUR PILLARS</a>
@@ -58,70 +31,31 @@
             <a href="contact.html" class="text-lg font-bold">CONTACT US</a>
         </div>
     </nav>
-
-    <!-- CONTENT -->
     <section class="flex-grow pt-32 md:pt-40 pb-20 px-6 max-w-6xl mx-auto w-full">
         <h2 class="font-display font-bold text-4xl md:text-5xl mb-16">RESOURCES</h2>
-
         <div class="space-y-12">
-            <!-- Video Media -->
             <div>
-                <div class="flex items-center gap-3 mb-6 border-l-4 border-brand-green pl-4">
-                    <i data-lucide="video" class="text-brand-green"></i>
-                    <h3 class="font-display font-bold text-2xl">Video/Media</h3>
-                </div>
-                
+                <div class="flex items-center gap-3 mb-6 border-l-4 border-brand-green pl-4"><i data-lucide="video" class="text-brand-green"></i><h3 class="font-display font-bold text-2xl">Video/Media</h3></div>
                 <div class="space-y-4">
-                    <a href="https://brilliantconvo.wixsite.com/home" target="_blank" class="block border border-brand-black p-6 hover:bg-gray-50 transition flex justify-between items-center group">
-                        <span class="font-bold">Documentary: For All The Brilliant Conversations</span>
-                        <i data-lucide="external-link" class="text-gray-400 group-hover:text-brand-green"></i>
-                    </a>
-                    <a href="https://www.youtube.com/watch?v=jMXQEL1Mh50" target="_blank" class="block border border-brand-black p-6 hover:bg-gray-50 transition flex justify-between items-center group">
-                        <span class="font-bold">Family TV Health Show on Muscular Dystrophy</span>
-                        <i data-lucide="external-link" class="text-gray-400 group-hover:text-brand-green"></i>
-                    </a>
-                     <a href="https://youtu.be/OGpv67_Ik-0" target="_blank" class="block border border-brand-black p-6 hover:bg-gray-50 transition flex justify-between items-center group">
-                        <span class="font-bold">Rare Disease Day 2014</span>
-                        <i data-lucide="external-link" class="text-gray-400 group-hover:text-brand-green"></i>
-                    </a>
-                     <a href="https://youtu.be/3NdDkCNttCo" target="_blank" class="block border border-brand-black p-6 hover:bg-gray-50 transition flex justify-between items-center group">
-                        <span class="font-bold">Rare Disease Day 2016</span>
-                        <i data-lucide="external-link" class="text-gray-400 group-hover:text-brand-green"></i>
-                    </a>
+                    <a href="https://youtu.be/mhbnyxEGc4E" target="_blank" class="block border border-brand-black p-6 hover:bg-gray-50 transition flex justify-between items-center group"><span class="font-bold">Documentary: For All The Brilliant Conversations</span><i data-lucide="external-link" class="text-gray-400 group-hover:text-brand-green"></i></a>
+                    <a href="https://www.youtube.com/watch?v=jMXQEL1Mh50" target="_blank" class="block border border-brand-black p-6 hover:bg-gray-50 transition flex justify-between items-center group"><span class="font-bold">Family TV Health Show on Muscular Dystrophy</span><i data-lucide="external-link" class="text-gray-400 group-hover:text-brand-green"></i></a>
+                    <a href="https://youtu.be/OGpv67_Ik-0" target="_blank" class="block border border-brand-black p-6 hover:bg-gray-50 transition flex justify-between items-center group"><span class="font-bold">Rare Disease Day 2014</span><i data-lucide="external-link" class="text-gray-400 group-hover:text-brand-green"></i></a>
+                    <a href="https://youtu.be/3NdDkCNttCo" target="_blank" class="block border border-brand-black p-6 hover:bg-gray-50 transition flex justify-between items-center group"><span class="font-bold">Rare Disease Day 2016</span><i data-lucide="external-link" class="text-gray-400 group-hover:text-brand-green"></i></a>
                 </div>
             </div>
-
-            <!-- Reading -->
             <div>
-                 <div class="flex items-center gap-3 mb-6 border-l-4 border-brand-green pl-4">
-                    <i data-lucide="book-open" class="text-brand-green"></i>
-                    <h3 class="font-display font-bold text-2xl">Reading/Publications</h3>
-                </div>
-
+                 <div class="flex items-center gap-3 mb-6 border-l-4 border-brand-green pl-4"><i data-lucide="book-open" class="text-brand-green"></i><h3 class="font-display font-bold text-2xl">Reading/Publications</h3></div>
                 <div class="space-y-4">
-                    <a href="https://read.dukeupress.edu/books/book/3194/Crip-Genealogies" target="_blank" class="block border border-brand-black p-6 hover:bg-gray-50 transition flex justify-between items-center group">
-                        <span class="font-bold text-brand-green">Book Chapter: Crip Genealogies (Duke University Press) by Faith Njahĩra Wangarĩ</span>
-                        <i data-lucide="external-link" class="text-gray-400 group-hover:text-brand-green"></i>
-                    </a>
-                    <a href="https://www.adry.up.ac.za/book-review-2022" target="_blank" class="block border border-brand-black p-6 hover:bg-gray-50 transition flex justify-between items-center group">
-                        <span class="font-bold">Book Review: African Disability Rights Yearbook (2022) by FN Wangarĩ</span>
-                        <i data-lucide="external-link" class="text-gray-400 group-hover:text-brand-green"></i>
-                    </a>
+                    <a href="https://read.dukeupress.edu/books/book/3194/Crip-Genealogies" target="_blank" class="block border border-brand-black p-6 hover:bg-gray-50 transition flex justify-between items-center group"><span class="font-bold text-brand-green">Book Chapter: Crip Genealogies (Duke University Press) by Faith Njahĩra Wangarĩ</span><i data-lucide="external-link" class="text-gray-400 group-hover:text-brand-green"></i></a>
+                    <a href="https://www.adry.up.ac.za/book-review-2022" target="_blank" class="block border border-brand-black p-6 hover:bg-gray-50 transition flex justify-between items-center group"><span class="font-bold">Book Review: African Disability Rights Yearbook (2022) by FN Wangarĩ</span><i data-lucide="external-link" class="text-gray-400 group-hover:text-brand-green"></i></a>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- FOOTER -->
     <footer class="bg-brand-black text-white py-8 border-t border-gray-800 mt-auto">
         <div class="container mx-auto px-6 flex flex-col items-center gap-4">
-            <a href="https://www.facebook.com/dystrophykenya" target="_blank" class="text-white hover:text-[#32CD32] transition-colors p-2 bg-gray-900 rounded-full">
-                <i data-lucide="facebook" class="w-6 h-6"></i>
-            </a>
-            <div class="text-center text-sm text-gray-400">
-                &copy; 2025 <span class="font-brand font-bold text-gray-200">Zaidi ya Misuli Resource Centre</span>. <br>
-                <span class="text-xs opacity-50 font-sans">Grounded in Disability Justice.</span>
-            </div>
+            <a href="https://www.facebook.com/dystrophykenya" target="_blank" class="text-white hover:text-[#32CD32] transition-colors p-2 bg-gray-900 rounded-full"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+            <div class="text-center text-sm text-gray-400">&copy; 2025 <span class="font-brand font-bold text-gray-200">Zaidi ya Misuli Resource Centre</span>. <br><span class="text-xs opacity-50 font-sans">Grounded in Disability Justice.</span></div>
         </div>
     </footer>
     <script>lucide.createIcons(); function toggleMobileMenu() { document.getElementById('mobile-menu').classList.toggle('hidden'); }</script>
