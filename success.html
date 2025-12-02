@@ -6,15 +6,24 @@
     <title>Thank You | Zaidi ya Misuli</title>
     <link rel="icon" type="image/png" href="rose-logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inter:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Syne:wght@700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script>tailwind.config = { theme: { extend: { colors: { 'brand-green': '#32CD32', 'brand-black': '#111111' }, fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Syne', 'sans-serif'], brand: ['Cinzel Decorative', 'cursive'] } } } }</script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'brand-green': '#32CD32', 'brand-black': '#111111' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Syne', 'sans-serif'], brand: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
     <style>body { animation: fadeIn 0.8s ease-in-out; }</style>
 </head>
 <body class="bg-white text-brand-black flex flex-col min-h-screen">
     <nav class="fixed top-0 w-full bg-white/95 backdrop-blur z-50 py-4 md:py-6 border-b border-gray-100">
         <div class="max-w-6xl mx-auto px-6 flex justify-center md:justify-start items-center">
-            <a href="index.html" class="font-brand font-black text-xl md:text-2xl tracking-tight leading-tight text-brand-black text-center md:text-left">Zaidi ya Misuli Resource Centre</a>
+            <a href="index.html" class="font-brand font-black text-xl md:text-2xl tracking-tighter leading-tight text-brand-black text-center md:text-left uppercase">Zaidi ya Misuli <span class="inline-block md:inline">Resource Centre</span></a>
         </div>
     </nav>
     <section class="flex-grow flex flex-col items-center justify-center text-center px-6 pt-32 pb-20">
