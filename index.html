@@ -33,29 +33,28 @@
 </head>
 <body class="bg-white text-brand-black transition-all duration-300">
 
-    <!-- NAVIGATION (Updated: Much Larger Text) -->
+    <!-- NAVIGATION (Clean URLs) -->
     <nav class="fixed top-0 w-full bg-white/95 backdrop-blur z-50 py-4 border-b border-gray-100">
         <div class="max-w-[90rem] mx-auto px-6 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-4 group">
+            <a href="/" class="flex items-center gap-4 group">
                 <img src="rose-logo.png" alt="Logo" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform">
-                <!-- INCREASED FONT SIZE HERE -->
                 <h1 class="font-display font-extrabold text-2xl md:text-3xl tracking-tight text-brand-black leading-none">Zaidi ya Misuli <br class="md:hidden">Resource Centre</h1>
             </a>
             <div class="hidden xl:flex space-x-8 text-lg font-bold font-display">
-                <a href="index.html" class="text-brand-green">Home</a>
-                <a href="about.html" class="hover:text-brand-green transition">About Us</a>
-                <a href="pillars.html" class="hover:text-brand-green transition">Our Pillars</a>
-                <a href="resources.html" class="hover:text-brand-green transition">Resources</a>
-                <a href="contact.html" class="hover:text-brand-green transition">Contact</a>
+                <a href="/" class="text-brand-green">Home</a>
+                <a href="/about" class="hover:text-brand-green transition">About Us</a>
+                <a href="/pillars" class="hover:text-brand-green transition">Our Pillars</a>
+                <a href="/resources" class="hover:text-brand-green transition">Resources</a>
+                <a href="/contact" class="hover:text-brand-green transition">Contact</a>
             </div>
             <button class="xl:hidden" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"><i data-lucide="menu" class="w-10 h-10"></i></button>
         </div>
         <div id="mobile-menu" class="hidden xl:hidden bg-white border-t p-6 space-y-4 shadow-xl">
-            <a href="index.html" class="block font-bold text-brand-green text-xl">Home</a>
-            <a href="about.html" class="block font-bold text-xl">About Us</a>
-            <a href="pillars.html" class="block font-bold text-xl">Our Pillars</a>
-            <a href="resources.html" class="block font-bold text-xl">Resources</a>
-            <a href="contact.html" class="block font-bold text-xl">Contact</a>
+            <a href="/" class="block font-bold text-brand-green text-xl">Home</a>
+            <a href="/about" class="block font-bold text-xl">About Us</a>
+            <a href="/pillars" class="block font-bold text-xl">Our Pillars</a>
+            <a href="/resources" class="block font-bold text-xl">Resources</a>
+            <a href="/contact" class="block font-bold text-xl">Contact</a>
         </div>
     </nav>
 
@@ -73,7 +72,7 @@
                     Demystifying, researching, and supporting those with muscular dystrophy in Kenya.
                 </p>
                 <div class="pt-8">
-                    <a href="resources.html" class="inline-block bg-brand-green text-white font-bold px-10 py-5 text-lg rounded shadow-lg hover:bg-black hover:-translate-y-1 transition-all duration-300">
+                    <a href="/resources" class="inline-block bg-brand-green text-white font-bold px-10 py-5 text-lg rounded shadow-lg hover:bg-black hover:-translate-y-1 transition-all duration-300">
                         SEE OUR WORK
                     </a>
                 </div>
@@ -93,7 +92,7 @@
         </div>
     </div>
 
-    <!-- FOOTER (Restored) -->
+    <!-- FOOTER -->
     <footer class="bg-brand-black text-white py-12 text-center text-base mt-auto">
         <p>&copy; 2025 Zaidi ya Misuli Resource Centre.</p>
     </footer>
