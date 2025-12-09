@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zaidi ya Misuli Resource Centre</title>
+    <title>Resources | Zaidi ya Misuli</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -11,7 +11,7 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { 'brand-green': '#32CD32', 'brand-black': '#111111', 'facebook': '#1877F2' },
+                    colors: { 'brand-green': '#32CD32', 'brand-black': '#111111' },
                     fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Inter', 'sans-serif'] },
                 }
             }
@@ -31,27 +31,28 @@
 </head>
 <body class="bg-white text-brand-black transition-all duration-300">
 
+    <!-- NAVIGATION -->
     <nav class="fixed top-0 w-full bg-white/95 backdrop-blur z-50 py-4 border-b border-gray-100">
-        <div class="max-w-[90rem] mx-auto px-6 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-4 group">
-                <img src="rose-logo.png" alt="Logo" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform">
-                <h1 class="font-display font-extrabold text-2xl md:text-3xl tracking-tight text-brand-black leading-none">Zaidi ya Misuli <br class="md:hidden">Resource Centre</h1>
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="rose-logo.png" alt="Logo" class="w-10 h-10 object-contain group-hover:scale-110 transition-transform">
+                <h1 class="font-display font-bold text-xl tracking-tight text-brand-black">Zaidi ya Misuli Resource Centre</h1>
             </a>
-            <div class="hidden xl:flex space-x-8 text-lg font-bold font-display">
+            <div class="hidden md:flex space-x-8 text-lg font-bold font-display">
                 <a href="index.html" class="hover:text-brand-green transition">Home</a>
                 <a href="about.html" class="hover:text-brand-green transition">About Us</a>
                 <a href="pillars.html" class="hover:text-brand-green transition">Our Pillars</a>
                 <a href="resources.html" class="text-brand-green">Resources</a>
                 <a href="contact.html" class="hover:text-brand-green transition">Contact</a>
             </div>
-            <button class="xl:hidden" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"><i data-lucide="menu" class="w-10 h-10"></i></button>
+            <button class="md:hidden" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"><i data-lucide="menu" class="w-8 h-8"></i></button>
         </div>
-        <div id="mobile-menu" class="hidden xl:hidden bg-white border-t p-6 space-y-4 shadow-xl">
-            <a href="index.html" class="block font-bold text-xl">Home</a>
-            <a href="about.html" class="block font-bold text-xl">About Us</a>
-            <a href="pillars.html" class="block font-bold text-xl">Our Pillars</a>
-            <a href="resources.html" class="block font-bold text-brand-green text-xl">Resources</a>
-            <a href="contact.html" class="block font-bold text-xl">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-6 space-y-4 shadow-xl">
+            <a href="index.html" class="block font-bold">Home</a>
+            <a href="about.html" class="block font-bold">About Us</a>
+            <a href="pillars.html" class="block font-bold">Our Pillars</a>
+            <a href="resources.html" class="block font-bold text-brand-green">Resources</a>
+            <a href="contact.html" class="block font-bold">Contact</a>
         </div>
     </nav>
 
@@ -59,6 +60,7 @@
         <h2 class="font-display font-bold text-6xl mb-16 border-b-4 border-brand-green inline-block pb-2">RESOURCES</h2>
 
         <div class="space-y-16">
+            <!-- Video Media -->
             <div>
                 <div class="flex items-center gap-4 mb-8 border-l-8 border-brand-green pl-6">
                     <i data-lucide="video" class="w-10 h-10 text-brand-green"></i>
@@ -80,6 +82,7 @@
                 </div>
             </div>
 
+            <!-- Reading -->
             <div>
                  <div class="flex items-center gap-4 mb-8 border-l-8 border-brand-green pl-6">
                     <i data-lucide="book-open" class="w-10 h-10 text-brand-green"></i>
@@ -92,20 +95,25 @@
                     <a href="https://www.adry.up.ac.za/book-review-2022" target="_blank" class="res-card group">
                         <span class="font-bold">Book Review: African Disability Rights Yearbook (2022) by FN Wangarĩ</span><i data-lucide="external-link"></i>
                     </a>
-                    <a href="https://www.facebook.com/dystrophykenya" target="_blank" class="res-card group">
-                        <div class="flex items-center gap-3"><span class="font-bold">Muscular Dystrophy Society Kenya (Facebook)</span><i data-lucide="facebook" class="text-facebook fill-current w-6 h-6"></i></div><i data-lucide="external-link"></i>
+                    <!-- UPDATED LINK: BLOGSPOT -->
+                    <a href="https://mdskenya.blogspot.com" target="_blank" class="res-card group">
+                        <div class="flex items-center gap-3">
+                            <span class="font-bold">Muscular Dystrophy Society Kenya (Blog)</span>
+                            <i data-lucide="globe" class="text-brand-green w-6 h-6"></i>
+                        </div>
+                        <i data-lucide="external-link"></i>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER (Restored) -->
+    <!-- FOOTER (Consistent across all pages) -->
     <footer class="bg-brand-black text-white py-12 text-center text-base mt-auto">
         <p>&copy; 2025 Zaidi ya Misuli Resource Centre.</p>
     </footer>
 
-    <!-- ACCESSIBILITY -->
+    <!-- ACCESSIBILITY WIDGET -->
     <button id="a11y-toggle" class="fixed bottom-8 right-6 z-50 bg-brand-black text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center gap-2" title="Accessibility Tools"><i data-lucide="accessibility" class="w-8 h-8"></i></button>
     <div id="a11y-widget" class="fixed top-24 right-0 h-[80vh] w-72 bg-white shadow-2xl border-l border-gray-200 z-40 p-6 overflow-y-auto rounded-l-xl">
         <div class="flex justify-between items-center mb-6"><h3 class="font-bold text-xl font-display">Accessibility</h3><button onclick="toggleWidget()" class="text-gray-500 hover:text-red-500"><i data-lucide="x"></i></button></div>
