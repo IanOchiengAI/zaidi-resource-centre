@@ -3,39 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Zaidi ya Misuli</title>
+    <title>Zaidi ya Misuli Resource Centre</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- NEW FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { 'brand-green': '#32CD32', 'brand-black': '#111111', 'linkedin': '#0077b5' },
-                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Syne', 'sans-serif'] }
+                    colors: { 'brand-green': '#32CD32', 'brand-black': '#111111', 'linkedin': '#0077b5', 'facebook': '#1877F2' },
+                    /* CHANGED FONT FAMILY TO INTER */
+                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Inter', 'sans-serif'] },
+                    boxShadow: { 'swiss-hover': '8px 8px 0px 0px #32CD32' }
                 }
             }
         }
     </script>
     <style>
-        /* Target Root for scaling */
+        /* Styles from index.html */
         html { scroll-behavior: smooth; font-size: 100%; } 
         body { -webkit-font-smoothing: antialiased; line-height: 1.6; }
-        
-        /* Force Widget to stay fixed size regardless of zoom */
         #a11y-widget, #a11y-widget button, #a11y-toggle { font-size: 16px !important; }
-
-        /* Accessibility Classes */
-        .grayscale-mode { filter: grayscale(100%); }
-        .high-contrast { background-color: black !important; color: yellow !important; }
-        .high-contrast * { border-color: yellow !important; background-color: black !important; color: yellow !important; }
-        .negative-contrast { filter: invert(100%); }
-        .light-bg { background-color: white !important; color: black !important; }
-        .links-underline a { text-decoration: underline !important; text-decoration-color: #32CD32 !important; }
-        .readable-font { font-family: Arial, sans-serif !important; }
-        
         #a11y-widget { transition: transform 0.3s ease-in-out; transform: translateX(100%); }
         #a11y-widget.open { transform: translateX(0); }
+        .high-contrast { background-color: black !important; color: yellow !important; }
+        .high-contrast * { border-color: yellow !important; background-color: black !important; color: yellow !important; }
+        .contact-card, .res-card { transition: all 0.2s; }
+        .contact-card:hover, .res-card:hover { transform: translateY(-4px); border-color: #32CD32; }
     </style>
 </head>
 <body class="bg-white text-brand-black transition-all duration-300">
@@ -146,3 +141,4 @@
     </script>
 </body>
 </html>
+
