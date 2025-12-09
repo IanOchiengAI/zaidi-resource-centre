@@ -4,127 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources | Zaidi ya Misuli</title>
-    
-    <link rel="icon" type="image/png" href="rose-logo.png">
-
-    <meta property="og:title" content="Resources - Zaidi ya Misuli Resource Centre">
-    <meta property="og:description" content="Watch our documentaries, health shows, and read our publications.">
-    <meta property="og:image" content="https://zaidiyamisuli.org/rose-logo.png">
-
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Syne:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { 'brand-green': '#32CD32', 'brand-black': '#111111' },
-                    fontFamily: { 
-                        sans: ['Inter', 'sans-serif'], 
-                        display: ['Syne', 'sans-serif'],
-                        helvetica: ['"Helvetica Hebrew"', 'Helvetica', 'Arial', 'sans-serif'] 
-                    }
+                    colors: { 'brand-green': '#32CD32', 'brand-black': '#111111', 'facebook': '#1877F2' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Syne', 'sans-serif'] },
                 }
             }
         }
     </script>
-    <style>body { animation: fadeIn 0.8s ease-in-out; }</style>
+    <style>
+        body { -webkit-font-smoothing: antialiased; font-size: 1.25rem; line-height: 1.6; }
+        .res-card { border: 2px solid #111111; padding: 2rem; transition: all 0.2s; display: flex; justify-content: space-between; align-items: center; }
+        .res-card:hover { border-color: #32CD32; color: #32CD32; }
+        #a11y-widget { transition: transform 0.3s ease-in-out; transform: translateX(100%); }
+        #a11y-widget.open { transform: translateX(0); }
+    </style>
 </head>
-<body class="bg-white text-brand-black flex flex-col min-h-screen">
+<body class="bg-white text-brand-black transition-all duration-300">
 
     <!-- NAVIGATION -->
-    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur z-50 py-4 md:py-6 border-b border-gray-100">
-        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
-            
-            <button onclick="toggleMobileMenu()" class="md:hidden w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-brand-green hover:text-white transition bg-white z-50 order-1 md:order-none shrink-0">
-                <i data-lucide="menu" class="w-5 h-5"></i>
-            </button>
-
-            <a href="index.html" class="order-2 md:order-none font-helvetica font-bold text-xl md:text-3xl tracking-tight leading-tight text-brand-black text-right md:text-left flex-grow md:flex-grow-0 ml-4 md:ml-0 uppercase">
-                Zaidi ya Misuli <span class="inline-block md:inline">Resource Centre</span>
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur z-50 py-4 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="rose-logo.png" alt="Logo" class="w-10 h-10 object-contain group-hover:scale-110 transition-transform">
+                <h1 class="font-display font-bold text-xl tracking-tight text-brand-black">Zaidi ya Misuli Resource Centre</h1>
             </a>
-
-            <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide font-sans md:ml-auto">
-                <a href="about.html" class="hover:text-brand-green transition">ABOUT US</a>
-                <a href="pillars.html" class="hover:text-brand-green transition">OUR PILLARS</a>
-                <a href="resources.html" class="text-brand-green font-bold">RESOURCES</a>
-                <a href="contact.html" class="hover:text-brand-green transition">CONTACT</a>
+            <div class="hidden md:flex space-x-8 text-base font-medium">
+                <a href="index.html" class="hover:text-brand-green transition">Home</a>
+                <a href="about.html" class="hover:text-brand-green transition">About Us</a>
+                <a href="pillars.html" class="hover:text-brand-green transition">Our Pillars</a>
+                <a href="resources.html" class="text-brand-green font-bold">Resources</a>
+                <a href="contact.html" class="hover:text-brand-green transition">Contact</a>
             </div>
+            <button class="md:hidden" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"><i data-lucide="menu" class="w-8 h-8"></i></button>
         </div>
-
-        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl py-6 px-6 flex flex-col space-y-4 md:hidden">
-            <a href="about.html" class="text-lg font-bold border-b border-gray-100 pb-2">ABOUT US</a>
-            <a href="pillars.html" class="text-lg font-bold border-b border-gray-100 pb-2">OUR PILLARS</a>
-            <a href="resources.html" class="text-lg font-bold border-b border-gray-100 pb-2">RESOURCES</a>
-            <a href="contact.html" class="text-lg font-bold">CONTACT US</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-6 space-y-4 shadow-xl">
+            <a href="index.html" class="block font-bold">Home</a>
+            <a href="about.html" class="block font-bold">About Us</a>
+            <a href="pillars.html" class="block font-bold">Our Pillars</a>
+            <a href="resources.html" class="block font-bold text-brand-green">Resources</a>
+            <a href="contact.html" class="block font-bold">Contact</a>
         </div>
     </nav>
 
-    <!-- CONTENT -->
-    <section class="flex-grow pt-32 md:pt-40 pb-20 px-6 max-w-6xl mx-auto w-full">
-        <h2 class="font-display font-bold text-4xl md:text-5xl mb-16">RESOURCES</h2>
+    <!-- RESOURCES CONTENT -->
+    <section class="pt-40 pb-24 px-6 max-w-7xl mx-auto">
+        <h2 class="font-display font-bold text-6xl mb-16 border-b-4 border-brand-green inline-block pb-2">RESOURCES</h2>
 
-        <div class="space-y-12">
+        <div class="space-y-16">
             <!-- Video Media -->
             <div>
-                <div class="flex items-center gap-3 mb-6 border-l-4 border-brand-green pl-4">
-                    <i data-lucide="video" class="text-brand-green"></i>
-                    <h3 class="font-display font-bold text-2xl">Video/Media</h3>
+                <div class="flex items-center gap-4 mb-8 border-l-8 border-brand-green pl-6">
+                    <i data-lucide="video" class="w-10 h-10 text-brand-green"></i>
+                    <h3 class="font-display font-bold text-4xl">Video/Media</h3>
                 </div>
-                
-                <div class="space-y-4">
-                    <a href="https://youtu.be/mhbnyxEGc4E" target="_blank" class="block border border-brand-black p-6 hover:bg-gray-50 transition flex justify-between items-center group">
-                        <span class="font-bold">Documentary: For All The Brilliant Conversations</span>
-                        <i data-lucide="external-link" class="text-gray-400 group-hover:text-brand-green"></i>
+                <div class="space-y-6 text-xl">
+                    <a href="https://brilliantconvo.wixsite.com/home" target="_blank" class="res-card group">
+                        <span class="font-bold">Documentary: For All The Brilliant Conversations</span><i data-lucide="external-link"></i>
                     </a>
-                    <a href="https://www.youtube.com/watch?v=jMXQEL1Mh50" target="_blank" class="block border border-brand-black p-6 hover:bg-gray-50 transition flex justify-between items-center group">
-                        <span class="font-bold">Family TV Health Show on Muscular Dystrophy</span>
-                        <i data-lucide="external-link" class="text-gray-400 group-hover:text-brand-green"></i>
+                    <a href="#" class="res-card group">
+                        <span class="font-bold">Family TV Health Show on Muscular Dystrophy</span><i data-lucide="external-link"></i>
                     </a>
-                     <a href="https://youtu.be/OGpv67_Ik-0" target="_blank" class="block border border-brand-black p-6 hover:bg-gray-50 transition flex justify-between items-center group">
-                        <span class="font-bold">Rare Disease Day 2014</span>
-                        <i data-lucide="external-link" class="text-gray-400 group-hover:text-brand-green"></i>
+                     <a href="https://youtu.be/OGpv67_Ik-0" target="_blank" class="res-card group">
+                        <span class="font-bold">Rare Disease Day 2014</span><i data-lucide="external-link"></i>
                     </a>
-                     <a href="https://youtu.be/3NdDkCNttCo" target="_blank" class="block border border-brand-black p-6 hover:bg-gray-50 transition flex justify-between items-center group">
-                        <span class="font-bold">Rare Disease Day 2016</span>
-                        <i data-lucide="external-link" class="text-gray-400 group-hover:text-brand-green"></i>
+                    <a href="https://youtu.be/3NdDkCNttCo" target="_blank" class="res-card group">
+                        <span class="font-bold">Rare Disease Day 2016</span><i data-lucide="external-link"></i>
                     </a>
                 </div>
             </div>
 
             <!-- Reading -->
             <div>
-                 <div class="flex items-center gap-3 mb-6 border-l-4 border-brand-green pl-4">
-                    <i data-lucide="book-open" class="text-brand-green"></i>
-                    <h3 class="font-display font-bold text-2xl">Reading/Publications</h3>
+                 <div class="flex items-center gap-4 mb-8 border-l-8 border-brand-green pl-6">
+                    <i data-lucide="book-open" class="w-10 h-10 text-brand-green"></i>
+                    <h3 class="font-display font-bold text-4xl">Reading/Publications</h3>
                 </div>
-
-                <div class="space-y-4">
-                    <a href="https://read.dukeupress.edu/books/book/3194/Crip-Genealogies" target="_blank" class="block border border-brand-black p-6 hover:bg-gray-50 transition flex justify-between items-center group">
-                        <span class="font-bold text-brand-green">Book Chapter: Crip Genealogies (Duke University Press) by Faith Njahĩra Wangarĩ</span>
-                        <i data-lucide="external-link" class="text-gray-400 group-hover:text-brand-green"></i>
+                <div class="space-y-6 text-xl">
+                    <a href="https://read.dukeupress.edu/books/book/3194/Crip-Genealogies" target="_blank" class="res-card group">
+                        <span class="font-bold">Book Chapter: Crip Genealogies (Duke University Press) by Faith Njahĩra Wangarĩ</span><i data-lucide="external-link"></i>
                     </a>
-                    <a href="https://www.adry.up.ac.za/book-review-2022" target="_blank" class="block border border-brand-black p-6 hover:bg-gray-50 transition flex justify-between items-center group">
-                        <span class="font-bold">Book Review: African Disability Rights Yearbook (2022) by FN Wangarĩ</span>
-                        <i data-lucide="external-link" class="text-gray-400 group-hover:text-brand-green"></i>
+                    <a href="https://www.adry.up.ac.za/book-review-2022" target="_blank" class="res-card group">
+                        <span class="font-bold">Book Review: African Disability Rights Yearbook (2022) by FN Wangarĩ</span><i data-lucide="external-link"></i>
+                    </a>
+                    <a href="#" class="res-card group">
+                        <div class="flex items-center gap-3"><span class="font-bold">Muscular Dystrophy Society Kenya (Facebook)</span><i data-lucide="facebook" class="text-facebook fill-current w-6 h-6"></i></div><i data-lucide="external-link"></i>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-brand-black text-white py-8 border-t border-gray-800 mt-auto">
-        <div class="container mx-auto px-6 flex flex-col items-center gap-4">
-            <a href="https://www.facebook.com/dystrophykenya" target="_blank" class="text-white hover:text-[#32CD32] transition-colors p-2 bg-gray-900 rounded-full">
-                <i data-lucide="facebook" class="w-6 h-6"></i>
-            </a>
-            <div class="text-center text-sm text-gray-400">
-                &copy; 2025 <span class="font-helvetica font-bold text-gray-200">Zaidi ya Misuli Resource Centre</span>. <br>
-                <span class="text-xs opacity-50 font-sans">Grounded in Disability Justice.</span>
-            </div>
+    <!-- ACCESSIBILITY WIDGET -->
+    <button id="a11y-toggle" class="fixed bottom-8 right-6 z-50 bg-brand-black text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center gap-2"><i data-lucide="accessibility" class="w-8 h-8"></i></button>
+    <div id="a11y-widget" class="fixed top-24 right-0 h-[80vh] w-72 bg-white shadow-2xl border-l border-gray-200 z-40 p-6 overflow-y-auto rounded-l-xl">
+        <div class="flex justify-between items-center mb-6"><h3 class="font-bold text-xl font-display">Accessibility</h3><button onclick="toggleWidget()" class="text-gray-500 hover:text-red-500"><i data-lucide="x"></i></button></div>
+        <div class="space-y-3">
+             <button onclick="adjustText(1)" class="w-full p-3 hover:bg-gray-100 rounded flex gap-3 border"><i data-lucide="type"></i> Increase Text</button>
+            <button onclick="adjustText(-1)" class="w-full p-3 hover:bg-gray-100 rounded flex gap-3 border"><i data-lucide="minus"></i> Decrease Text</button>
+            <button onclick="toggleFilter('grayscale-mode')" class="w-full p-3 hover:bg-gray-100 rounded flex gap-3 border"><i data-lucide="eye-off"></i> Grayscale</button>
+            <button onclick="toggleFilter('high-contrast')" class="w-full p-3 hover:bg-gray-100 rounded flex gap-3 border"><i data-lucide="contrast"></i> High Contrast</button>
+             <button onclick="resetA11y()" class="w-full p-3 bg-gray-100 text-red-600 rounded flex gap-3 mt-4"><i data-lucide="rotate-ccw"></i> Reset</button>
         </div>
-    </footer>
-    <script>lucide.createIcons(); function toggleMobileMenu() { document.getElementById('mobile-menu').classList.toggle('hidden'); }</script>
+    </div>
+    <script>
+        lucide.createIcons();
+        const widget = document.getElementById('a11y-widget');
+        const toggleBtn = document.getElementById('a11y-toggle');
+        toggleBtn.addEventListener('click', toggleWidget);
+        function toggleWidget() { widget.classList.toggle('open'); }
+        let fontSize = 100;
+        function adjustText(direction) { fontSize += (direction * 10); document.body.style.fontSize = fontSize + '%'; }
+        function toggleFilter(className) { document.body.classList.toggle(className); }
+        function resetA11y() { document.body.className = "bg-white text-brand-black transition-all duration-300"; document.body.style.fontSize = ''; fontSize = 100; }
+    </script>
 </body>
 </html>
