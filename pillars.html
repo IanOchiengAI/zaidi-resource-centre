@@ -5,39 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Pillars | Zaidi ya Misuli</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- UPDATED FONT: Only Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: { 'brand-green': '#32CD32', 'brand-black': '#111111' },
-                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Syne', 'sans-serif'] },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Inter', 'sans-serif'] },
                     boxShadow: { 'swiss-hover': '8px 8px 0px 0px #32CD32' }
                 }
             }
         }
     </script>
     <style>
-        /* Target Root for scaling */
         html { scroll-behavior: smooth; font-size: 100%; } 
         body { -webkit-font-smoothing: antialiased; line-height: 1.6; }
-        
-        /* Force Widget to stay fixed size */
         #a11y-widget, #a11y-widget button, #a11y-toggle { font-size: 16px !important; }
-        
-        /* Accessibility Classes */
-        .grayscale-mode { filter: grayscale(100%); }
-        .high-contrast { background-color: black !important; color: yellow !important; }
-        .high-contrast * { border-color: yellow !important; background-color: black !important; color: yellow !important; }
-        .negative-contrast { filter: invert(100%); }
-        .light-bg { background-color: white !important; color: black !important; }
-        .links-underline a { text-decoration: underline !important; text-decoration-color: #32CD32 !important; }
-        
         #a11y-widget { transition: transform 0.3s ease-in-out; transform: translateX(100%); }
         #a11y-widget.open { transform: translateX(0); }
         .pillar-card { transition: all 0.3s ease-out; border: 2px solid #111111; }
         .pillar-card:hover { border-color: #32CD32; transform: translateY(-4px); box-shadow: 6px 6px 0px 0px #32CD32; }
+        .high-contrast { background-color: black !important; color: yellow !important; }
+        .high-contrast * { border-color: yellow !important; background-color: black !important; color: yellow !important; }
     </style>
 </head>
 <body class="bg-white text-brand-black transition-all duration-300">
@@ -94,7 +85,9 @@
         </div>
 
         <div class="mt-20 border-t-2 border-brand-black pt-16">
-            <h3 class="font-display font-extrabold text-4xl md:text-5xl leading-tight">
+            <!-- UPDATED QUOTE FONT STYLE -->
+            <!-- Using font-extrabold instead of standard bold, but with Inter it won't look stretched -->
+            <h3 class="font-display font-extrabold text-4xl md:text-5xl leading-tight tracking-tight">
                 Together, these pillars create a foundation for lasting change—one that honors the full humanity of every person.
             </h3>
         </div>
@@ -109,8 +102,6 @@
             <button onclick="adjustText(-5)" class="w-full p-4 hover:bg-gray-100 rounded flex gap-3 border"><i data-lucide="minus"></i> Decrease Text</button>
             <button onclick="toggleFilter('grayscale-mode')" class="w-full p-4 hover:bg-gray-100 rounded flex gap-3 border"><i data-lucide="eye-off"></i> Grayscale</button>
             <button onclick="toggleFilter('high-contrast')" class="w-full p-4 hover:bg-gray-100 rounded flex gap-3 border"><i data-lucide="contrast"></i> High Contrast</button>
-            <button onclick="toggleFilter('light-bg')" class="w-full p-4 hover:bg-gray-100 rounded flex gap-3 border"><i data-lucide="sun"></i> Light Background</button>
-            <button onclick="toggleFilter('links-underline')" class="w-full p-4 hover:bg-gray-100 rounded flex gap-3 border"><i data-lucide="link"></i> Links Underline</button>
              <button onclick="resetA11y()" class="w-full p-4 bg-gray-100 text-red-600 rounded flex gap-3 mt-4"><i data-lucide="rotate-ccw"></i> Reset</button>
         </div>
     </div>
@@ -120,19 +111,10 @@
         const toggleBtn = document.getElementById('a11y-toggle');
         toggleBtn.addEventListener('click', toggleWidget);
         function toggleWidget() { widget.classList.toggle('open'); }
-        
         let currentZoom = 100;
-        function adjustText(amount) {
-            currentZoom += amount;
-            document.documentElement.style.fontSize = currentZoom + "%";
-        }
-
+        function adjustText(amount) { currentZoom += amount; document.documentElement.style.fontSize = currentZoom + "%"; }
         function toggleFilter(className) { document.body.classList.toggle(className); }
-        function resetA11y() { 
-            document.body.className = "bg-white text-brand-black transition-all duration-300"; 
-            document.documentElement.style.fontSize = "100%"; 
-            currentZoom = 100; 
-        }
+        function resetA11y() { document.body.className = "bg-white text-brand-black transition-all duration-300"; document.documentElement.style.fontSize = "100%"; currentZoom = 100; }
     </script>
 </body>
 </html>
