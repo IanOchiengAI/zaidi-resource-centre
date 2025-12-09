@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Zaidi ya Misuli</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- UPDATED FONTS: Only loading Inter (Clean, standard, not stretched) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
@@ -13,7 +12,6 @@
             theme: {
                 extend: {
                     colors: { 'brand-green': '#32CD32', 'brand-black': '#111111' },
-                    // Both Body and Display now use Inter for a clean, unified look
                     fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Inter', 'sans-serif'] }
                 }
             }
@@ -22,33 +20,29 @@
     <style>
         html { scroll-behavior: smooth; font-size: 100%; } 
         body { -webkit-font-smoothing: antialiased; line-height: 1.6; }
-        
-        /* Force Widget to stay fixed size */
         #a11y-widget, #a11y-widget button, #a11y-toggle { font-size: 16px !important; }
-
-        /* Accessibility Classes */
         .grayscale-mode { filter: grayscale(100%); }
         .high-contrast { background-color: black !important; color: yellow !important; }
         .high-contrast * { border-color: yellow !important; background-color: black !important; color: yellow !important; }
         .negative-contrast { filter: invert(100%); }
         .light-bg { background-color: white !important; color: black !important; }
         .links-underline a { text-decoration: underline !important; text-decoration-color: #32CD32 !important; }
-        
         #a11y-widget { transition: transform 0.3s ease-in-out; transform: translateX(100%); }
         #a11y-widget.open { transform: translateX(0); }
     </style>
 </head>
 <body class="bg-white text-brand-black transition-all duration-300">
 
-    <!-- NAVIGATION -->
+    <!-- NAVIGATION (Updated Font to Bold Display) -->
     <nav class="fixed top-0 w-full bg-white/95 backdrop-blur z-50 py-4 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3 group">
                 <img src="rose-logo.png" alt="Logo" class="w-10 h-10 object-contain group-hover:scale-110 transition-transform">
                 <h1 class="font-display font-bold text-xl tracking-tight text-brand-black">Zaidi ya Misuli Resource Centre</h1>
             </a>
-            <div class="hidden md:flex space-x-8 text-base font-medium">
-                <a href="index.html" class="text-brand-green font-bold">Home</a>
+            <!-- UPDATED: text-lg, font-bold, font-display -->
+            <div class="hidden md:flex space-x-8 text-lg font-bold font-display">
+                <a href="index.html" class="text-brand-green">Home</a>
                 <a href="about.html" class="hover:text-brand-green transition">About Us</a>
                 <a href="pillars.html" class="hover:text-brand-green transition">Our Pillars</a>
                 <a href="resources.html" class="hover:text-brand-green transition">Resources</a>
@@ -65,25 +59,19 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION (Updated Font & Sizing) -->
+    <!-- HERO SECTION -->
     <section class="pt-40 pb-24 px-6 max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row items-center justify-between gap-12">
             <div class="md:w-1/2 space-y-6 animate-fade-in-up">
-                
-                <!-- PRIMARY TITLE: Clean Inter Font, Heavy Weight, Tighter Leading -->
                 <h1 class="font-display font-black text-5xl md:text-7xl text-brand-black leading-tight tracking-tight">
                     Zaidi ya Misuli <br>Resource Centre
                 </h1>
-
-                <!-- SECONDARY SLOGAN: Slightly Smaller than Title -->
                 <h2 class="font-display font-bold text-3xl md:text-5xl text-brand-green tracking-tight">
                     Beyond Muscles.
                 </h2>
-
                 <p class="text-xl md:text-2xl font-normal text-gray-800 leading-relaxed max-w-xl">
                     Demystifying, researching, and supporting those with muscular dystrophy in Kenya.
                 </p>
-
                 <div class="pt-8">
                     <a href="pillars.html" class="inline-block bg-brand-green text-white font-bold px-10 py-5 text-lg rounded shadow-lg hover:bg-black hover:-translate-y-1 transition-all duration-300">
                         SEE OUR WORK
